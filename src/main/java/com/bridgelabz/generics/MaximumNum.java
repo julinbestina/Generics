@@ -18,4 +18,10 @@ public class MaximumNum {
         }
         return num3;
     }
+
+    public static void main(String[] args) {
+        MaximumNum maximumNum = new MaximumNum(45,69,70);
+        int result = maximumNum.findMaximumNum();
+        System.out.println(result);
+    }
 }
