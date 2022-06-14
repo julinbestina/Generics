@@ -46,4 +46,26 @@ public class MaxNumTest {
         Assert.assertEquals(98,result,65);
     }
 
+    @Test
+    public void givenMaxStringInPos1_WhenMax_ShouldReturnNum() {
+        MaximumNum maximumNum = new MaximumNum();
+        String result = maximumNum.findMaximumString("Banana","Peach","Apple");
+        Assert.assertEquals("Peach",result);
+    }
+
+    @Test
+    public void givenMaxStringInPos2_WhenMax_ShouldReturnNum() {
+        MaximumNum maximumNum = new MaximumNum();
+        String result = maximumNum.findMaximumString("Apple","Banana","Peach");
+        Assert.assertEquals("Peach",result);
+    }
+
+    @Test
+    public void givenMaxStringInPos3_WhenMax_ShouldReturnNum() {
+        MaximumNum maximumNum = new MaximumNum();
+        String result = maximumNum.findMaximumString("Apple","Peach","Banana");
+        Assert.assertEquals("Peach",result);
+    }
+
+
 }

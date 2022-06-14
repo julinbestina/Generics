@@ -29,4 +29,13 @@ public class MaximumNum {
     }
 
 
+    public String findMaximumString(String item1, String item2, String item3 ) {
+        if((item1.compareTo(item2)) >0 && (item1.compareTo(item3)) > 0) {
+            return item1;
+        }
+        else if(item2.compareTo(item3) > 0) {
+            return item2;
+        }
+        return item3;
+    }
 }
