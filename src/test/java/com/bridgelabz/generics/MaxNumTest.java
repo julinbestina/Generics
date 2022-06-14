@@ -6,66 +6,72 @@ import org.junit.Test;
 public class MaxNumTest {
     @Test
     public void givenMaxNumInFirstPos_WhenMax_ShouldReturnNum() {
-        MaximumNum maximumNum = new MaximumNum();
-        int result = maximumNum.findMaximum(23, 2, 1);
+        MaximumNum maximumNum = new MaximumNum(23, 2, 1);
+        int result = (int) maximumNum.findMaximum();
         Assert.assertEquals(23, result);
     }
 
     @Test
     public void givenMaxNumInSecondPos_WhenMax_ShouldReturnNum() {
-        MaximumNum maximumNum = new MaximumNum();
-        int result = maximumNum.findMaximum(56, 70, 65);
+        MaximumNum maximumNum = new MaximumNum(56, 70, 65);
+        int result = (int) maximumNum.findMaximum();
         Assert.assertEquals(70,result);
     }
 
     @Test
     public void givenMaxNumInThirdPos_WhenMax_ShouldReturnNum() {
-        MaximumNum maximumNum = new MaximumNum();
-        int result = maximumNum.findMaximum(15,46,83);
+        MaximumNum maximumNum = new MaximumNum(15,46,83);
+        int result = (int) maximumNum.findMaximum();
         Assert.assertEquals(83,result);
     }
 
     @Test
     public void givenMaxFloatNumInPos1_WhenMax_ShouldReturnNum() {
-        MaximumNum maximumNum = new MaximumNum();
-        double result = maximumNum.findMaximum(9.84, 7.56, 2.58);
+        MaximumNum maximumNum = new MaximumNum(9.84, 7.56, 2.58);
+        double result = (double) maximumNum.findMaximum();
         Assert.assertEquals(9, result,84);
     }
 
     @Test
     public void givenMaxFloatNumInPos2_WhenMax_ShouldReturnNum() {
-        MaximumNum maximumNum = new MaximumNum();
-        double result = maximumNum.findMaximum(8.956, 11.869, 5.26);
+        MaximumNum maximumNum = new MaximumNum(8.956, 11.869, 5.26);
+        double result = (double) maximumNum.findMaximum();
         Assert.assertEquals(11,result, 869);
     }
 
     @Test
     public void givenMaxFloatNumInPos3_WhenMax_ShouldReturnNum() {
-        MaximumNum maximumNum = new MaximumNum();
-        double result = maximumNum.findMaximum(13.6985, 78.659, 98.65);
+        MaximumNum maximumNum = new MaximumNum(13.6985, 78.659, 98.65);
+        double result = (double) maximumNum.findMaximum();
         Assert.assertEquals(98,result,65);
     }
 
     @Test
     public void givenMaxStringInPos1_WhenMax_ShouldReturnNum() {
-        MaximumNum maximumNum = new MaximumNum();
-        String result = maximumNum.findMaximum("Banana","Peach","Apple");
+        MaximumNum maximumNum = new MaximumNum("Banana","Peach","Apple");
+        String result = (String) maximumNum.findMaximum();
         Assert.assertEquals("Peach",result);
     }
 
     @Test
     public void givenMaxStringInPos2_WhenMax_ShouldReturnNum() {
-        MaximumNum maximumNum = new MaximumNum();
-        String result = maximumNum.findMaximum("Apple","Banana","Peach");
+        MaximumNum maximumNum = new MaximumNum("Apple","Banana","Peach");
+        String result = (String) maximumNum.findMaximum();
         Assert.assertEquals("Peach",result);
     }
 
     @Test
     public void givenMaxStringInPos3_WhenMax_ShouldReturnNum() {
-        MaximumNum maximumNum = new MaximumNum();
-        String result = maximumNum.findMaximum("Apple","Peach","Banana");
+        MaximumNum maximumNum = new MaximumNum("Apple","Peach","Banana");
+        String result = (String) maximumNum.findMaximum();
         Assert.assertEquals("Peach",result);
     }
 
+    @Test
+    public void givenMaxInPos3_WhenMax_ShouldReturnNum() {
+        MaximumNum maximumNum = new MaximumNum("Apple","Peach","Banana");
+        Comparable result = maximumNum.findMaximum();
+        Assert.assertEquals("Peach",result);
+    }
 
 }
