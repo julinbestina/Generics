@@ -2,14 +2,13 @@ package com.bridgelabz.generics;
 
 public class MaximumNum {
     Integer num1, num2, num3;
+    Double num4, num5, num6;
 
-    public MaximumNum(Integer num1, Integer num2, Integer num3) {
-        this.num1 = num1;
-        this.num2 = num2;
-        this.num3 = num3;
+    public MaximumNum() {
+
     }
 
-    public int findMaximumNum(){
+    public int findMaximumNum(Integer num1, Integer num2, Integer num3){
         if((num1.compareTo(num2)) >0 && (num1.compareTo(num3)) > 0) {
             return num1;
         }
@@ -19,9 +18,15 @@ public class MaximumNum {
         return num3;
     }
 
-    public static void main(String[] args) {
-        MaximumNum maximumNum = new MaximumNum(45,69,70);
-        int result = maximumNum.findMaximumNum();
-        System.out.println(result);
+    public double findMaximumNum(Double num1, Double num2, Double num3){
+        if((num1.compareTo(num2)) >0 && (num1.compareTo(num3)) > 0) {
+            return num1;
+        }
+        else if(num2.compareTo(num3) > 0) {
+            return num2;
+        }
+        return num3;
     }
+
+
 }
