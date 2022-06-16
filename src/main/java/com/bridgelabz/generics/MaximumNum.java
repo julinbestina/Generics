@@ -1,6 +1,5 @@
 package com.bridgelabz.generics;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class MaximumNum<T extends Comparable> {
@@ -18,9 +17,16 @@ public class MaximumNum<T extends Comparable> {
 
     public <T extends Comparable> T findMaximum(T... num) {
         Arrays.sort(num);
-        int max = num.length - 1;
-        return num[max];
+        T max = num[num.length - 1];
+        printMaximum(max);
+        return max;
     }
+
+    private <T extends Comparable> void printMaximum(T max) {
+        System.out.println("Maximum of given Numbers = " + max);
+    }
+
+
 
 
 }
